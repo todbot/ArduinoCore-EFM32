@@ -3,7 +3,19 @@
 
 WORK IN PROGRESS
 
-This repo will eventually house a working Arduino core for [Tomu](https://tomu.im/) and similar EFM32 boards.
+This repo will eventually house a working Arduino core for [Tomu](https://tomu.im/)
+and similar [EFM32HG](https://www.silabs.com/products/mcu/32-bit/efm32-happy-gecko) boards.
+
+The EFM32HG is a pretty great chip:
+- ARM Cortex-M+ @ 25 MHz
+- Crystalless USB w/ built-in 3.3V regulator for minimal part count
+- 64 kB flash / 8 kB RAM
+- Capacitive touch sensors
+- Super low-power
+
+And thanks to the Tomu project:
+- [USB DFU bootloader - "toboot"](https://github.com/im-tomu/tomu-bootloader/)
+
 
 This README will serve as a notepad as I work through the process.
 
