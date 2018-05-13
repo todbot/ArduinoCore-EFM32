@@ -19,6 +19,7 @@ And thanks to the Tomu project:
 
 This README will serve as a notepad as I work through the process.
 
+
 Cribbing a lot from:
 - https://github.com/adafruit/ArduinoCore-samd
 - https://github.com/arduino-org/arduino-core-stm32f4
@@ -28,4 +29,12 @@ Also see:
 - https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification
 - https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
 
+
+----
+Progress:
+- Start by cribbing basic boards.txt & platform.txt from other ARM Cortex-M0+ projects
+- To start, use [Gecko SDK](https://github.com/SiliconLabs/Gecko_SDK) instead of [libopencm3](https://github.com/libopencm3) (which supports EFM32HG now) because libopencm3 doesn't have all the peripheral libraries built out yet (particularly interesting to me are LEUART, USART (for SPI & UART), MSC (for self-programming of flash to emulate EEPROM).
+- Embed Gecko SDK for now, in pre-release I believe the license can allow for this. Eventually make it a separate package that's downloaded?
+- Rely on Tomu's toboot for DFU upload. It seems a good DFU implementation.
+- Rely on Arduino's [dfu-util package](https://github.com/arduino/dfu-utils-cross). Be sure to check out `dfu-prefix` and `dfu-suffix` commands to use before `dfu-util`.
 
