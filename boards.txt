@@ -16,13 +16,13 @@
 
 menu.cache=Cache
 
-tomu.name=Adafruit Trinket M0
+tomu.name=Tomu compatible
 tomu.vid.0=0x239A
 tomu.pid.0=0x801E
 tomu.vid.1=0x239A
 tomu.pid.1=0x001E
-tomu.upload.tool=bossac
-tomu.upload.protocol=sam-ba
+tomu.upload.tool=dfu-util
+tomu.upload.protocol=dfu
 tomu.upload.maximum_size=262144
 tomu.upload.offset=0x2000
 tomu.upload.use_1200bps_touch=true
@@ -34,7 +34,7 @@ tomu.build.usb_product="Tomu M0"
 tomu.build.usb_manufacturer="todbot"
 tomu.build.board=TOMU
 tomu.build.core=arduino
-tomu.build.extra_flags=-DCRYSTALLESS -DADAFRUIT_TRINKET_M0 -D__SAMD21E18A__ -DARM_MATH_CM0PLUS {build.usb_flags}
+tomu.build.extra_flags=-DEFM32HG309F64 -DARM_MATH_CM0PLUS {build.usb_flags}
 tomu.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 tomu.build.openocdscript=openocd_scripts/arduino_zero.cfg
 tomu.build.variant=tomu
@@ -42,4 +42,4 @@ tomu.build.variant_system_lib=
 tomu.build.vid=0x239A
 tomu.build.pid=0x801E
 tomu.bootloader.tool=openocd
-tomu.bootloader.file=trinket/bootloader_uf2.bin
+tomu.bootloader.file=tomu/bootloader_bootsted.bin
